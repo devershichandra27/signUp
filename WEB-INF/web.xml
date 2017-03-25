@@ -3,7 +3,7 @@
 <web-app>
 	<servlet>
 		<servlet-name>SignUp</servlet-name>
-		<jsp-file>/signUp.html</jsp-file>
+		<jsp-file>/views/signUp.html</jsp-file>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>SignUp</servlet-name>
