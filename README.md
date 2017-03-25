@@ -3,8 +3,8 @@ A simple signUp page made using java servlets, mysql database.
 
 You must have following installed
 
-1.Tomcat7.
-2.Mysql database
+1.Tomcat7. <br />
+2.Mysql database 
 
 
 Steps to set-Up
