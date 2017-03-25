@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app>
+	<servlet>
+		<servlet-name>SignUp</servlet-name>
+		<jsp-file>/signUp.html</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignUp</servlet-name>
+		<url-pattern>/signUp</url-pattern>
+	</servlet-mapping>
+</web-app>
