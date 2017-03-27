@@ -15,5 +15,8 @@ Steps to set-Up
 ```bash
 mysql -u root -p < createDatabase.sql
 ```
-
+3. Start Tomcat7
+```bash
+/etc/init.d/tomcat7 start
+```
 ...to be continued

@@ -5,8 +5,16 @@
 		<servlet-name>SignUp</servlet-name>
 		<jsp-file>/views/signUp.html</jsp-file>
 	</servlet>
+	<servlet>
+		<servlet-name>WelcomePage</servlet-name>
+		<jsp-file>/views/welcome.html</jsp-file>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>SignUp</servlet-name>
 		<url-pattern>/signUp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WelcomePage</servlet-name>
+		<url-pattern>/welcome</url-pattern>
 	</servlet-mapping>
 </web-app>

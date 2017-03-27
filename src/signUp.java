@@ -47,7 +47,7 @@ public class signUp extends HttpServlet
 
 		if(validate(username, password))
 		{
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("Welcome");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/welcome");
 			requestDispatcher.forward(request, response);
 		}
 		else
