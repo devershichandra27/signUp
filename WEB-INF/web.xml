@@ -9,6 +9,26 @@
 		<servlet-name>WelcomePage</servlet-name>
 		<jsp-file>/views/welcome.html</jsp-file>
 	</servlet>
+	<servlet>
+		<servlet-name>RegisterPage</servlet-name>
+		<jsp-file>/views/register.html</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>SignUp</servlet-name>
+		<servlet-class>signUp</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>Register</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterPage</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>SignUp</servlet-name>
 		<url-pattern>/signUp</url-pattern>
@@ -17,4 +37,7 @@
 		<servlet-name>WelcomePage</servlet-name>
 		<url-pattern>/welcome</url-pattern>
 	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>/views/signUp.html</welcome-file>
+	</welcome-file-list>
 </web-app>
