@@ -1,13 +1,15 @@
-<%@page import = "java.sql.DriverManager"%>
-<%@page import = "java.sql.ResultSet"%>
-<%@page import = "java.sql.PreparedStatement"%>
-<%@page import = "java.sql.Connection"%>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Profile Page</title>
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 </head>
+<%@page import = "java.sql.DriverManager"%>
+<%@page import = "java.sql.ResultSet"%>
+<%@page import = "java.sql.PreparedStatement"%>
+<%@page import = "java.sql.Connection"%>
+<%!
+	boolean collegeChangeFlag= false;
+%>
 <body>
 	<nav class="navbar sticky-top navbar-inverse bg-primary">
 	<!-- <a  href="#" style="color:#FFFFFF; font-size: 25px;" align="right">Profile</a> -->
@@ -31,15 +33,11 @@
     </tr>
     <tr>
       <th scope="row">College</th>
-      <form action="profile" method="post"> 
-      <td>
-      	<input type="text" class="form-control" name="collegename" placeholder="<%=request.getSession().getAttribute("collegename")%> ">
-  	  </td>
-  	  <td>
-  	  	<button type="submit" class="btn btn-primary btn-lg"> Change 
-  	  					</button>  
-		</td>
-		</form>
+  		<form action="profile-servlet" method="post"> 
+      		<td>
+      			<input type="text" class="form-control" name="collegename" placeholder="<%=session.getAttribute("collegename")%>">
+  	  </td> <td></td>
+		
     </tr>
     <tr>
       <th scope="row">Username</th>
@@ -48,28 +46,30 @@
     </tr>
     <tr>
       <th scope="row">Nickname</th>
-      <form action="profile" method="post"> 
       <td>
-      	<input type="text" class="form-control" name="nickname" value="<%=request.getSession().getAttribute("nickname")%>">
-  	  </td>
-  	  <td>
-  	  	<button type="submit" class="btn btn-primary btn-lg" onclick="<% request.getSession().setAttribute("nickname", request.getParameter("nickname")); %>" > Change 
-  	  					</button>  
-		</td>
-		</form>
+      	<input type="text" class="form-control" name="nickname" placeholder="<%=request.getSession().getAttribute("nickname")%>">
+  	  </td><td></td>
+    </tr>
+    <tr>
+      <th scope="row">Country</th>
+      <td>
+      	<input type="text" class="form-control" name="country" placeholder="<%=request.getSession().getAttribute("country")%>">
+  	  </td><td></td>
     </tr>
     <tr>
       <th scope="row">DOB</th>
-      <form action="profile" method="post"> 
       <td>
-      	<input type="text" class="form-control" name="DOB" value="<%=request.getSession().getAttribute("DOB")%>">
+      	<input type="text" class="form-control" name="DOB" placeholder="<%=request.getSession().getAttribute("DOB")%>">
   	  </td>
-  	  <td>
-  	  	<button type="submit" class="btn btn-primary btn-lg" onclick="<% request.getSession().setAttribute("DOB", request.getParameter("DOB")); %>" > Change 
-  	  					</button>  
-		</td>
-		</form>
+  	  <td>YYYY-MM-DD format</td>
     </tr>
+    <tr>
+    <td></td>
+    <td>
+    	<button class="btn btn-primary btn-block" >Update</button>
+    	</td><td></td>
+    </tr>
+    </form>
   </tbody>
 </table>
 </body>
