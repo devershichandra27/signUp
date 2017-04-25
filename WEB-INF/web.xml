@@ -6,8 +6,12 @@
 		<jsp-file>/views/signUp.html</jsp-file>
 	</servlet>
 	<servlet>
-		<servlet-name>WelcomePage</servlet-name>
-		<jsp-file>/views/welcome.html</jsp-file>
+		<servlet-name>HomePage</servlet-name>
+		<jsp-file>/views/home.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>ProfilePage</servlet-name>
+		<jsp-file>/views/profile.jsp</jsp-file>
 	</servlet>
 	<servlet>
 		<servlet-name>RegisterPage</servlet-name>
@@ -26,16 +30,20 @@
 		<url-pattern>/Register.do</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
+		<servlet-name>ProfilePage</servlet-name>
+		<url-pattern>/profile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HomePage</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>RegisterPage</servlet-name>
 		<url-pattern>/register</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>SignUp</servlet-name>
 		<url-pattern>/signUp</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>WelcomePage</servlet-name>
-		<url-pattern>/welcome</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>/views/signUp.html</welcome-file>
