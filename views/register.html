@@ -67,6 +67,8 @@ span.psw {
     }
 }
 </style>
+<link rel="stylesheet" type="text/css" href="
+./css/bootstrap.css">
 <body>
 <h1>Register to create new Account!</h1>
 <form method = "post" action="Register.do">
@@ -79,10 +81,9 @@ span.psw {
         <input type="text" name="username" placeholder="Enter Username" required>
 		<label><b>Password</b></label>
 		<input type="password" name="password" placeholder="Enter password" required>
-		<button type="Submit">Login</button>
-	</div>
-	<div class="container" style="background-color: #f1f1f1">
-		<button type="reset" class="cancelbtn">Reset</button>
+		<input class="btn btn-primary btn-lg" role="button" type="submit" > 
+        <input type="reset" class="btn btn-danger btn-lg">
+	
         <a align="right" href="/signUp/">Already a member?</a>
 	</div>
 </form>
