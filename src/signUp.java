@@ -23,13 +23,15 @@ public class signUp extends HttpServlet
 
 		if(VerificationServlet.validate(username, password))
 		{	
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/welcome");
-			requestDispatcher.forward(request, response);
+			HttpSession session = request.getSession();
+			session.setAttribute("username", username);
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/home");
+			requestDispatcher.include(request, response);
 		}
 		else
 		{
-			//out.println("Sorry incorrect username or password " + username + " " + password);
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("signUp.html");
+			out.println("Sorry incorrect username or password ");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/");
 			requestDispatcher.include(request, response);
 		}
 		out.close();
