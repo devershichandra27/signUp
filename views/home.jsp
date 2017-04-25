@@ -14,7 +14,7 @@
 	{
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/assignment?user=root&password=Gmail@123");
-		String sql = "Select * from user_table where username = ?";
+		String sql = "Select first_name, last_name, nick_name, college_name, country, date_of_birth from user_table where username = ?";
 		PreparedStatement ps = con.prepareStatement(sql);
 
 		ps.setString(1, username);
@@ -24,7 +24,7 @@
 		first_name = rs.getString("first_name");
 		session.setAttribute("firstName", first_name);
 		session.setAttribute("lastName", rs.getString("last_name"));
-		session.setAttribute("nickname", rs.getString("nickname"));
+		session.setAttribute("nickname", rs.getString("nick_name"));
 		session.setAttribute("collegename", rs.getString("college_name"));
 		session.setAttribute("country", rs.getString("country"));
 		session.setAttribute("DOB", rs.getString("date_of_birth"));
