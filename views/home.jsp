@@ -35,9 +35,13 @@
 
 %>
 <body>
+	<nav class="navbar sticky-top navbar-inverse bg-primary">
+	<!-- <a  href="#" style="color:#FFFFFF; font-size: 25px;" align="right">Profile</a> -->
+  	<a  href="logout" style="color:#FFFFFF; font-size: 25px;" align="right">Logout</a>
+	</nav>
 	<div class="jumbotron">
   <h1 class="display-3">Hello, <%= first_name  %></h1>
-  <p class="lead">This is your home page. We wish you have amazing experience ahead.
+  <p class="lead">This is your home page. We wish you have amazing experience ahead. </p>
   <hr class="my-2">
   <p>To continue click on the button below to update your profile.</p>
   <p class="lead">
