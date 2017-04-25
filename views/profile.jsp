@@ -3,13 +3,6 @@
 	<title>Profile Page</title>
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 </head>
-<%@page import = "java.sql.DriverManager"%>
-<%@page import = "java.sql.ResultSet"%>
-<%@page import = "java.sql.PreparedStatement"%>
-<%@page import = "java.sql.Connection"%>
-<%!
-	boolean collegeChangeFlag= false;
-%>
 <body>
 	<nav class="navbar sticky-top navbar-inverse bg-primary">
 	<!-- <a  href="#" style="color:#FFFFFF; font-size: 25px;" align="right">Profile</a> -->
